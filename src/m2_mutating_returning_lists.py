@@ -37,7 +37,7 @@ def main():
 def run_test_doubler():
     """ Tests the    doubler    function. """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement this TEST function.
+    # Done: 2. Implement this TEST function.
     #   It TESTS the  doubler  function defined below.
     #   Include at least ** 1 ** ADDITIONAL test beyond those we wrote.
     #
@@ -134,9 +134,10 @@ def doubler(list1, list2):
     # ------------------------------------------------------------------
     for k in range(len(list1)):
         list1[k] = list1[k]*2
-    list2_new= list2
-    for j in range(len(list2)):
-        list2_new[j] = list2_new[j]*2
+    list2_new = []
+    if list2 != []:
+        for j in range(len(list2)):
+            list2_new.append(list2[j]*2)
     return list2_new
 
 # ----------------------------------------------------------------------
