@@ -5,8 +5,8 @@ This problem provides practice at:
   ***  MUTATING  and  RETURNING-NEW  LISTS.  ***
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Luke Clinton.
+"""  # Done PUT YOUR NAME IN THE ABOVE LINE.
 
 ########################################################################
 # Students:
@@ -83,6 +83,28 @@ def run_test_doubler():
     # TO DO 2 (continued): Add your ADDITIONAL test(s) here:
     # ------------------------------------------------------------------
 
+    # Test 1:
+    arg1 = [1, 2, 3, 4]
+    arg2 = [2, 4, 6]
+    correct_arg1_after = [2, 4, 6, 8]
+    correct_arg2_after = [4, 8, 12]
+    expected = [4, 8, 12]
+
+    print()
+    print('BEFORE the function call:')
+    print('  Argument 1 is:', arg1)
+    print('  Argument 2 is:', arg2)
+
+    answer = doubler(arg1, arg2)
+
+    print('AFTER the function call:')
+    print('  Argument 1 is:       ', arg1)
+    print('  Argument 1 should be:', correct_arg1_after)
+    print('  Argument 2 is:       ', arg2)
+    print('  Argument 2 should be:', correct_arg2_after)
+    print('The returned value is:       ', answer)
+    print('The returned value should be:', expected)
+
 
 def doubler(list1, list2):
     """
@@ -102,7 +124,7 @@ def doubler(list1, list2):
         :type list2: list of int
     """
     # ------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # done: 3. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     # ------------------------------------------------------------------
     # ------------------------------------------------------------------
@@ -110,7 +132,12 @@ def doubler(list1, list2):
     #    DIFFICULTY:      4
     #    TIME ESTIMATE:   5 minutes.
     # ------------------------------------------------------------------
-
+    for k in range(len(list1)):
+        list1[k] = list1[k]*2
+    list2_new= list2
+    for j in range(len(list2)):
+        list2_new[j] = list2_new[j]*2
+    return list2_new
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
